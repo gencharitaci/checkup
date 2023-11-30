@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Discover data about places in your community.">
+  <meta name="keywords" content="Mecklenburg, GIS, portal">
+  <meta name="author" content="Tobin Bradley">
+
+  <title>Checkup - Mecklenburg County GIS</title>
+
+  <!-- prefect for performance -->
+  <link rel="preload" as="image" href="img/logo.svg">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://storage.googleapis.com">
+
+  <!-- icon stuff -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+
+  <meta name="theme-color" content="#2a4365">
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="geoportal3">
+  <link rel="apple-touch-icon" href="img/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#2a4365">
+  <meta name="msapplication-TileImage" content="img/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2a4365">
+
+</head>
+
+<body>
+  <!-- header -->
+  <nav id="header" class="bg-blue-900 shadow-lg print:hidden">
+    <div class="flex justify-between flex-wrap px-2 py-2 md:py-4 max-w-6xl mx-auto">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+
+        <a href="./">
+          <span class="font-semibold text-xl tracking-wide text-white"><span class="hidden md:inline">Mecklenburg County
+            </span>Checkup</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main content -->
+  <main class="max-w-5xl mx-auto py-10 px-5 md:px-4 print:py-1">
+
+      <!-- services section header -->
+      <div class="px-5 py-2 bg-blue-800 text-white font-bold text-xl rounded shadow-xl">Services</div>
+      <!-- CSS grid of tests (PHP REST, Node 1, Node 2, GeoServer) -->
+      <div class="flex flex-wrap justify-around" id="app"></div>
+
+      <!-- ETL section header -->
+      <div class="mt-12 px-5 py-2 bg-blue-800 text-white font-bold text-xl rounded shadow-xl">ETL Log</div>
+      <!-- ETL table -->
+      <div id="etllog"></div>
+
+
+  </main>
+
+  <div id="backtotop" class="print:hidden"></div>
+  <script type="module" src="/src/main.ts"></script>
+
+</body>
+</html>
